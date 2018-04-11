@@ -6,7 +6,7 @@ void setup() {
     // put your setup code here, to run once:
     Serial.begin(115200);
     while(!Serial.available());
-    motor1 = new ESC(PA6, 1280, 2000);
+    motor1 = new ESC(PA6, 1280);
     delay(1000);
     Serial.println("Writing LOW!");
     motor1->writePowerPercent(0);

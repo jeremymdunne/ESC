@@ -9,7 +9,7 @@ class ESC{
   Servo _esc;
 public:
   ESC(int pin);
-  ESC(int pin, long min, long max);
+  ESC(int pin, long spoolUpValue);
   //ESC(int pin, long min, long max);
   void writePowerPercent(float percent);
   void writeMicroseconds(long microseconds);
@@ -17,7 +17,7 @@ public:
   long getWriteMicroseconds();
   float getWritePowerPercent();
 private:
-  long _min,_max;
+  long _min = 1200,_max = 1200, _spoolup = 1200;
   int _pin;
 };
 
